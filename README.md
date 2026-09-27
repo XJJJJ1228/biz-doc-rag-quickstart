@@ -1,4 +1,3 @@
-```
 # biz-doc-rag-quickstart
 面向业务人员的企业私有文档RAG知识库快速搭建工具箱
 > 项目定位：聚焦中文企业文档预处理、语义切片、提示词工程、RAG问答效果评估。
@@ -13,15 +12,14 @@
 5. 轻量化实现：无复杂后端，Python脚本开箱即用，业务人员可快速搭建知识库
 
 ## 📁 仓库目录
-```
-
+```text
 biz-doc-rag-quickstart/
 ├── README.md                    # 项目说明
-├── requirements.txt             # Python 依赖
+├── requirements.txt             # Python依赖
 ├── docs/
 │   ├── 中文文档预处理规范.md
 │   ├── 语义切片策略.md
-│   └── RAG 效果评估指标.md
+│   └── RAG效果评估指标.md
 ├── prompts/
 │   ├── base_rag_prompt.md
 │   ├── cite_source_prompt.md
@@ -29,17 +27,18 @@ biz-doc-rag-quickstart/
 ├── test_cases/
 │   ├── case1_company_rule.txt
 │   ├── case2_project_plan.txt
-│   └── RAG 问答效果评估表.md
+│   └── RAG问答效果评估表.md
 └── scripts/
-├── text_clean.py
-├── semantic_splitter.py
-└── rag_evaluator.py
-
+    ├── text_clean.py
+    ├── semantic_splitter.py
+    └── rag_evaluator.py
 ```
 
 ## 🚀 快速开始
+
 1. 安装依赖
-```bash
+
+```
 pip install -r requirements.txt
 ```
 
@@ -74,11 +73,18 @@ python scripts/rag_evaluator.py
 - 引用准确性：引用片段与原文是否一致
 - 信息完整性：是否遗漏关键信息
 
-## 📝 测试案例说明
+## 📖 测试案例说明
 
 test_cases 存放脱敏企业文档，包含企业人事制度、项目实施方案，用于多组 RAG 问答测试。
 
-## ⚠️ 局限与后续优化方向
+```
 
-当前版本仅处理文本文件；PDF/Word 需要先导出文本。
-后续可扩展：接入 Chroma 向量库、增加简单 Web 页面、批量自动读取 PDF。
+## 使用方法
+1. 点铅笔图标进入README编辑页
+2. **全选页面里所有旧文字，全部删除**
+3. 粘贴上面整段全部内容
+4. 提交信息填写：`统一README代码块格式`，提交修改
+
+粘贴完成后，所有代码块样式统一，目录和命令都有高亮显示。
+提交完成，仓库就全部完工啦，之后我们就可以写简历项目描述+面试问答。
+```
