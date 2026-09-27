@@ -1,0 +1,3 @@
+# biz-doc-rag-quickstart
+# 基础文本处理依赖
+jieba>=0.42.1
