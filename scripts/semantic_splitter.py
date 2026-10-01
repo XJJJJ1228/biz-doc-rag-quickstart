@@ -1,5 +1,7 @@
 import re
 import json
+import sys
+import os
 
 def split_semantic(text: str, source_file: str):
     chunks = []
@@ -39,10 +41,19 @@ def split_semantic(text: str, source_file: str):
     return chunks
 
 if __name__ == "__main__":
-    input_file = "test_cases/case1_company_rule_cleaned.txt"
+    # 从命令行获取输入文件
+    if len(sys.argv) < 2:
+        print("用法：python scripts/semantic_splitter.py test_cases/xxx_cleaned.txt")
+        sys.exit(1)
+
+    input_file = sys.argv[1]
+    # 提取文件名，作为source_file
+    source_file_name = os.path.basename(input_file)
+
     with open(input_file, "r", encoding="utf-8") as f:
         text = f.read()
-    chunk_result = split_semantic(text, "case1_company_rule.txt")
+    chunk_result = split_semantic(text, source_file_name)
+    
     out_file = "test_cases/chunks_output.json"
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(chunk_result, f, ensure_ascii=False, indent=2)
